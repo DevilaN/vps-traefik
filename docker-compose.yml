@@ -29,7 +29,7 @@ services:
       - "--providers.file.directory=/dynconf"
       - "--providers.file.watch=true"
 
-		# Do not allow unknown domains to connect to instance
+        # Do not allow unknown domains to connect to instance
       - "--serversTransport.insecureSkipVerify=true"
 
       - "--log=true"
