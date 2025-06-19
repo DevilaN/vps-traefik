@@ -71,7 +71,7 @@ services:
       # Lets Encrypt Provider of SSL certificates (for https)
       - "--certificatesresolvers.le.acme.tlschallenge=true"
       - "--certificatesresolvers.le.acme.email=${ACME_NOTIFICATION_MAIL}"
-      - "--certificatesresolvers.le.acme.storage=/letsencrypt/acme.json"
+      - "--certificatesresolvers.le.acme.storage=/certs/acme.json"
 
     ports:
       - target: 80
