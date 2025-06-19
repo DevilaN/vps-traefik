@@ -56,7 +56,7 @@ services:
       # - ""
       # - ""
       # - "--entryPoints.websecure.http.middlewares=forceHSTS"
-      - "--entryPoints.websecure.http.middlewares=test-inflight@file,test-security@file"
+      # - "--entryPoints.websecure.http.middlewares=test-inflight@file,test-security@file"
 
         # SLOWLORIS
       - "--entryPoints.web.transport.respondingTimeouts.idleTimeout=3"
@@ -89,7 +89,6 @@ services:
       - "traefik.http.routers.traefik.rule=Host(`${SERVICE_DOMAIN}`)"
       - "traefik.http.routers.traefik.service=api@internal"
       - "traefik.http.routers.traefik.tls.certresolver=le"
-      - "traefik.http.routers.traefik.tls=true"
       - "traefik.http.routers.traefik.middlewares=traefik-auth"
       - "traefik.http.middlewares.traefik-auth.basicauth.users=${TRAEFIK_CREDENTIALS}"
 
